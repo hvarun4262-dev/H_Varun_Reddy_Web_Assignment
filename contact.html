@@ -1,291 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | H Varun Reddy</title>
-
-    <link rel="stylesheet"
-          href="style.css">
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-
-    <!-- Header -->
-    <header>
-
-        <div class="container navbar">
-
-            <div class="brand">
-
-                <div class="logo">
-                    HVR
-                </div>
-
-                <div>
-
-                    <h1>
-                        H Varun Reddy
-                    </h1>
-
-                    <p>
-                        B.E. Computer Science • 3rd Year
-                    </p>
-
-                </div>
-
+<header>
+    <div class="container navbar">
+        <div class="brand">
+            <div class="logo">HVR</div>
+            <div>
+                <h1>H Varun Reddy</h1>
+                <p>Computer Science Engineering<br>RVITM</p>
             </div>
-
-
-            <!-- Navigation -->
-            <nav>
-
-                <ul class="nav-links">
-
-                    <li>
-                        <a href="index.html">
-                            Home
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="resume.html">
-                            Resume
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="biodata.html">
-                            Bio-Data
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html"
-                           class="active">
-
-                            Contact
-
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
         </div>
-
-    </header>
-
-
-    <!-- Main -->
-    <main class="container">
-
-
-        <!-- Heading -->
-        <section class="page-heading">
-
-            <h2>
-                Contact
-            </h2>
-
-            <p>
-                Get in touch through the details below.
-            </p>
-
-        </section>
-
-
-        <section class="contact-grid">
-
-
-            <!-- Contact Details -->
-            <article class="card">
-
-                <h2 class="card-title">
-                    Contact Details
-                </h2>
-
-
-                <ul class="contact-list">
-
-                    <li>
-                        <strong>Email:</strong>
-                        varun@gmail.com
-                    </li>
-
-                    <li>
-                        <strong>Phone:</strong>
-                        +91-8123732898
-                    </li>
-
-                    <li>
-                        <strong>Location:</strong>
-                        India
-                    </li>
-
-                    <li>
-                        <strong>Status:</strong>
-                        B.E. 3rd Year Student
-                    </li>
-
-                    <li>
-
-                        <strong>GitHub:</strong>
-
-                        <a href="https://github.com/hvarun4262-dev"
-                           target="_blank">
-
-                            github.com/hvarun4262-dev
-
-                        </a>
-
-                    </li>
-
-                </ul>
-
-            </article>
-
-
-            <!-- Contact Form -->
-            <article class="card">
-
-                <h2 class="card-title">
-                    Send a Message
-                </h2>
-
-
-                <form id="contactForm">
-
-
-                    <label for="fullName">
-                        Full Name *
-                    </label>
-
-                    <input
-                        type="text"
-                        id="fullName"
-                        placeholder="Enter your name"
-                    >
-
-                    <span
-                        id="nameError"
-                        class="error">
-                    </span>
-
-
-                    <label for="email">
-                        Email Address *
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                    >
-
-                    <span
-                        id="emailError"
-                        class="error">
-                    </span>
-
-
-                    <label for="message">
-                        Message *
-                    </label>
-
-                    <textarea
-                        id="message"
-                        placeholder="Write your message here...">
-                    </textarea>
-
-                    <span
-                        id="messageError"
-                        class="error">
-                    </span>
-
-
-                    <div class="button-row">
-
-                        <button
-                            type="submit"
-                            class="btn primary">
-
-                            Send Message
-
-                        </button>
-
-
-                        <button
-                            type="reset"
-                            class="btn">
-
-                            Reset
-
-                        </button>
-
-                    </div>
-
-
-                    <div
-                        id="successMessage"
-                        class="success-message">
-
-                        Message validated successfully!
-
-                    </div>
-
-                </form>
-
-            </article>
-
-        </section>
-
-
-        <!-- Assignment Information -->
-        <section class="card">
-
-            <h2 class="card-title">
-                Technologies Used
-            </h2>
-
-            <p>
-                HTML5, CSS3, JavaScript, jQuery and
-                GitHub Pages for cloud hosting.
-            </p>
-
-        </section>
-
-    </main>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-
-            &copy;
-            <span id="currentYear"></span>
-            H Varun Reddy
-
-        </p>
-
-    </footer>
-
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-    <!-- JavaScript -->
-    <script src="script.js"></script>
-
+        <nav aria-label="Main navigation">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="biodata.html">Bio-Data</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="sidebar-note">
+            Feel free to get in touch.<br>
+            <a href="mailto:varun@gmail.com">varun@gmail.com</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="page-heading">
+        <p class="eyebrow">03 / Contact</p>
+        <h2>Get in touch</h2>
+        <p>Contact information and a simple form with client-side validation.</p>
+    </section>
+
+    <section class="contact-grid">
+        <article class="card">
+            <h2 class="card-title">Contact Details</h2>
+            <ul class="contact-list">
+                <li><strong>Email</strong><a href="mailto:varun@gmail.com">varun@gmail.com</a></li>
+                <li><strong>Phone</strong><a href="tel:+918123732898">8123732898</a></li>
+                <li><strong>College</strong>RVITM</li>
+                <li><strong>GitHub</strong><a href="https://github.com/hvarun4262-dev" target="_blank" rel="noopener noreferrer">github.com/hvarun4262-dev</a></li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h2 class="card-title">Send a Message</h2>
+            <form id="contactForm" novalidate>
+                <label for="fullName">Name</label>
+                <input type="text" id="fullName" name="fullName" autocomplete="name">
+                <span id="nameError" class="error"></span>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email">
+                <span id="emailError" class="error"></span>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message"></textarea>
+                <span id="messageError" class="error"></span>
+
+                <div class="button-row">
+                    <button type="submit" class="btn primary">Validate Message</button>
+                    <button type="reset" class="btn">Reset</button>
+                </div>
+
+                <p id="successMessage" class="success-message" role="status">
+                    The form passed validation. This demo does not send messages to a server.
+                </p>
+            </form>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="currentYear"></span> H Varun Reddy</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
