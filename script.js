@@ -1,137 +1,61 @@
 $(document).ready(function () {
+    // Display the current year in the footer.
+    $("#currentYear").text(new Date().getFullYear());
 
-
-    /* =================================
-       CURRENT YEAR
-    ================================= */
-
-    $("#currentYear").text(
-        new Date().getFullYear()
-    );
-
-
-    /* =================================
-       CONTACT FORM VALIDATION
-    ================================= */
-
-    $("#contactForm").submit(function (event) {
-
+    // Validate the contact form.
+    $("#contactForm").on("submit", function (event) {
         event.preventDefault();
-
 
         let valid = true;
 
-
-        // Clear old error messages
         $(".error").text("");
-
         $("#successMessage").hide();
 
-
-        // Get values
-        let name =
-            $("#fullName").val().trim();
-
-        let email =
-            $("#email").val().trim();
-
-        let message =
-            $("#message").val().trim();
-
-
-        /* Name Validation */
+        const name = $("#fullName").val().trim();
+        const email = $("#email").val().trim();
+        const message = $("#message").val().trim();
 
         if (name.length < 2) {
-
-            $("#nameError").text(
-                "Please enter your name."
-            );
-
+            $("#nameError").text("Enter a name with at least 2 characters.");
             valid = false;
         }
 
-
-        /* Email Validation */
-
-        let emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!emailPattern.test(email)) {
-
-            $("#emailError").text(
-                "Please enter a valid email address."
-            );
-
+            $("#emailError").text("Enter a valid email address.");
             valid = false;
         }
-
-
-        /* Message Validation */
 
         if (message.length < 10) {
-
-            $("#messageError").text(
-                "Message should contain at least 10 characters."
-            );
-
+            $("#messageError").text("Enter a message with at least 10 characters.");
             valid = false;
         }
 
-
-        /* Successful Submission */
-
         if (valid) {
-
-            $("#successMessage")
-                .fadeIn(300)
-                .delay(1500)
-                .fadeOut(300);
-
-
-            $("#contactForm")[0].reset();
+            $("#successMessage").fadeIn(200);
         }
-
     });
 
-
-    /* =================================
-       BIO-DATA DECLARATION TOGGLE
-    ================================= */
-
-    $("#toggleDeclaration").click(function () {
-
-        $("#declarationText").slideToggle(300);
-
-
-        if (
-            $(this).text()
-            === "Hide Declaration"
-        ) {
-
-            $(this).text(
-                "Show Declaration"
-            );
-
-        } else {
-
-            $(this).text(
-                "Hide Declaration"
-            );
-
-        }
-
+    // Clear validation messages when the form is reset.
+    $("#contactForm").on("reset", function () {
+        $(".error").text("");
+        $("#successMessage").hide();
     });
 
+    // Show or hide the bio-data declaration.
+    $("#toggleDeclaration").on("click", function () {
+        $("#declarationText").slideToggle(200);
 
-    /* =================================
-       PRINT RESUME
-    ================================= */
+        const hidden = $(this).text() === "Hide Declaration";
 
-    $(".print-page").click(function () {
+        $(this).text(
+            hidden ? "Show Declaration" : "Hide Declaration"
+        );
+    });
 
+    // Print the resume or save it as a PDF.
+    $(".print-page").on("click", function () {
         window.print();
-
     });
-
 });
